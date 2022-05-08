@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import NavbarComponent from "./components/NavbarComponent";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import PageTwo from "./pages/PageTwo";
+import PageThree from "./pages/PageThree";
+import PageOne from "./pages/PageOne";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <NavbarComponent />
+      <div className="topSpace"></div>
+      <Routes>
+        <Route path="/one" element={<PageOne />} />
+        <Route path="/two" element={<PageTwo />} />
+        <Route path="/three" element={<PageThree />} />
+        <Route path="*" element={<Navigate to="/one" />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
