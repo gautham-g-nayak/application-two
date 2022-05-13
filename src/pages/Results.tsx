@@ -32,6 +32,8 @@ const Results = () => {
 
   useEffect(() => {
     setValueOfPieChart();
+    const length = Object.entries(appData.answers).length;
+    console.log(`length is ${length}`);
   }, [appData]);
 
   return (
