@@ -29,8 +29,30 @@
   },
   {
     "id": 4,
-    "question": "List down all the lifecycle methods in React",
-    "questionType": "textInput",
-    "answerOptions": [{ "option": "componentDidMount", "isCorrect": true }]
+    "question": "React is a javascript library.",
+    "questionType": "radio",
+    "answerOptions": [
+      { "option": "True", "isCorrect": true },
+      { "option": "False", "isCorrect": false }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Match the following 1.React 2.Angular 3.Flutter",
+    "questionType": "radio",
+    "answerOptions": [
+      {
+        "option": "1)javascript library 2) platform and framework 3) framework",
+        "isCorrect": true
+      },
+      {
+        "option": "1)framework 2) javascript library 3)platform and framework ",
+        "isCorrect": false
+      },
+      {
+        "option": "1)platform and framework 2) framework 3) javascript library",
+        "isCorrect": false
+      }
+    ]
   }
 ]
